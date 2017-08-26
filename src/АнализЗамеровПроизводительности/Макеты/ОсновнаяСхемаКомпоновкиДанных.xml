@@ -160,7 +160,16 @@
 			ТОГДА 1
 		ИНАЧЕ 0
 	КОНЕЦ КАК КоличествоОперацийХорошо,
-	NULL КАК APDEX,
+	ВЫБОР
+		КОГДА ЗамерыВремени.ВремяВыполнения &lt;= ЗамерыВремени.КлючеваяОперация.ЦелевоеВремя
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ + ВЫБОР
+		КОГДА ЗамерыВремени.ВремяВыполнения &gt; ЗамерыВремени.КлючеваяОперация.ЦелевоеВремя
+				И ЗамерыВремени.ВремяВыполнения &lt;= ЗамерыВремени.КлючеваяОперация.ЦелевоеВремя * 4
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ / 2 / 1 КАК APDEX,
 	1 КАК КоличествоОпераций,
 	ЗамерыВремени.Пользователь КАК Пользователь,
 	ЗамерыВремени.НомерСеанса КАК НомерСеанса,
@@ -238,8 +247,13 @@
 			<use>Always</use>
 		</parameter>
 		<settingsVariant>
-			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">Основной</name>
-			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xsi:type="xs:string">Основной</presentation>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">АнализПроизводительностиAPDEX</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Анализ производительности (APDEX)</d4p1:content>
+				</d4p1:item>
+			</presentation>
 		</settingsVariant>
 	</dataCompositionSchema>
 </SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
