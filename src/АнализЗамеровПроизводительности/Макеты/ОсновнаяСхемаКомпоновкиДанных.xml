@@ -175,6 +175,20 @@
 				<appearance/>
 				<inputParameters/>
 			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаЗаписиЧас</dataPath>
+				<field>ДатаЗаписиЧас</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Дата записи час</d5p1:content>
+					</d5p1:item>
+				</title>
+				<role>
+					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
+				</role>
+				<appearance/>
+			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ
 	ЗамерыВремени.КлючеваяОперация КАК КлючеваяОперация,
@@ -197,7 +211,8 @@
 	1 КАК КоличествоОпераций,
 	ЗамерыВремени.Пользователь КАК Пользователь,
 	ЗамерыВремени.НомерСеанса КАК НомерСеанса,
-	ЗамерыВремени.Комментарий КАК Комментарий
+	ЗамерыВремени.Комментарий КАК Комментарий,
+	ЗамерыВремени.ДатаЗаписиНачалоЧаса КАК ДатаЗаписиЧас
 ПОМЕСТИТЬ ИсходныеДанные
 ИЗ
 	РегистрСведений.ЗамерыВремени КАК ЗамерыВремени
@@ -241,7 +256,8 @@
 		КОГДА ЕСТЬNULL(СлужебныеДанные.МинимальныйПриоритет, 0) = 0
 			ТОГДА 1
 		ИНАЧЕ ЕСТЬNULL(СлужебныеДанные.МинимальныйПриоритет, 0)
-	КОНЕЦ КАК МинимальныйПриоритет
+	КОНЕЦ КАК МинимальныйПриоритет,
+	ИсходныеДанные.ДатаЗаписиЧас КАК ДатаЗаписиЧас
 ИЗ
 	ИсходныеДанные КАК ИсходныеДанные
 		ЛЕВОЕ СОЕДИНЕНИЕ СлужебныеДанные КАК СлужебныеДанные
@@ -264,6 +280,10 @@
             (МАКСИМУМ(МаксимальноеКоличествоОпераций) / СУММА(КоличествоОпераций) * (1 - (МАКСИМУМ(Приоритет) - 1) / МИНИМУМ(МинимальныйПриоритет)))
         )+ 0.001 
 Конец</expression>
+		</totalField>
+		<totalField>
+			<dataPath>ВремяВыполнения</dataPath>
+			<expression>Среднее(ВремяВыполнения)</expression>
 		</totalField>
 		<parameter>
 			<name>Период</name>
@@ -334,6 +354,15 @@
 				</d4p1:item>
 			</presentation>
 		</settingsVariant>
+		<settingsVariant>
+			<name xmlns="http://v8.1c.ru/8.1/data-composition-system/settings">ДинамикаДлительностиОпераций</name>
+			<presentation xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
+				<d4p1:item>
+					<d4p1:lang>ru</d4p1:lang>
+					<d4p1:content>Динамика длительности операций</d4p1:content>
+				</d4p1:item>
+			</presentation>
+		</settingsVariant>
 	</dataCompositionSchema>
 </SchemaFile>﻿<?xml version="1.0" encoding="UTF-8"?>
 <Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -358,6 +387,12 @@
 		</item>
 		<item xsi:type="SelectedItemField">
 			<field>ВремяВыполнения</field>
+			<lwsTitle>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Среднее время выполнения (сек.)</v8:content>
+				</v8:item>
+			</lwsTitle>
 		</item>
 		<item xsi:type="SelectedItemField">
 			<field>APDEX</field>
@@ -389,6 +424,9 @@
 			<selection>
 				<item>
 					<field>APDEX</field>
+				</item>
+				<item>
+					<field>ВремяВыполнения</field>
 				</item>
 			</selection>
 			<filter/>
@@ -520,6 +558,90 @@
 				</item>
 			</item>
 		</item>
+	</item>
+</Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>ВремяВыполнения</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ДатаЗаписиЧас</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>КлючеваяОперация</field>
+		</item>
+	</selection>
+	<filter>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">КлючеваяОперация</left>
+			<comparisonType>Equal</comparisonType>
+			<userSettingID>64d1e33a-6dd0-4935-b6cb-749773afc8a1</userSettingID>
+		</item>
+	</filter>
+	<dataParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>Период</dcscor:parameter>
+			<dcscor:value xsi:type="v8:StandardPeriod">
+				<v8:variant xsi:type="v8:StandardPeriodVariant">ThisWeek</v8:variant>
+			</dcscor:value>
+			<userSettingID>1550c572-9571-4f36-a24e-69f6fd0ff877</userSettingID>
+		</dcscor:item>
+	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>ВремяВыполнения</field>
+			<orderType>Desc</orderType>
+		</item>
+	</order>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+			<dcscor:value xsi:type="v8ui:ChartType">Column3D</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemChart">
+		<point>
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>ДатаЗаписиЧас</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<outputParameters/>
+		</point>
+		<series>
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>КлючеваяОперация</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<outputParameters/>
+		</series>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<outputParameters/>
 	</item>
 </Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
 <SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
