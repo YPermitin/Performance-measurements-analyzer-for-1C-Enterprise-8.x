@@ -14,7 +14,6 @@
 					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
 				</role>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>КоличествоОпераций</dataPath>
@@ -32,13 +31,11 @@
 					<order>true</order>
 				</useRestriction>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ВремяВыполнения</dataPath>
 				<field>ВремяВыполнения</field>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>APDEX</dataPath>
@@ -50,13 +47,11 @@
 					</d5p1:item>
 				</title>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>Комментарий</dataPath>
 				<field>Комментарий</field>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>КоличествоОперацийОтлично</dataPath>
@@ -74,7 +69,6 @@
 					<order>true</order>
 				</useRestriction>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>Приоритет</dataPath>
@@ -86,13 +80,11 @@
 					</d5p1:item>
 				</title>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ДатаЗаписи</dataPath>
 				<field>ДатаЗаписи</field>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>НомерСеанса</dataPath>
@@ -101,13 +93,11 @@
 					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
 				</role>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>Пользователь</dataPath>
 				<field>Пользователь</field>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>КоличествоОперацийХорошо</dataPath>
@@ -125,7 +115,6 @@
 					<order>true</order>
 				</useRestriction>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ЦелевоеВремя</dataPath>
@@ -137,7 +126,6 @@
 					</d5p1:item>
 				</title>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>МаксимальноеКоличествоОпераций</dataPath>
@@ -155,7 +143,6 @@
 					<order>true</order>
 				</useRestriction>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>МинимальныйПриоритет</dataPath>
@@ -173,7 +160,6 @@
 					<order>true</order>
 				</useRestriction>
 				<appearance/>
-				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ДатаЗаписиЧас</dataPath>
@@ -302,7 +288,6 @@
 				<d4p1:endDate>0001-01-01T00:00:00</d4p1:endDate>
 			</value>
 			<useRestriction>false</useRestriction>
-			<inputParameters/>
 			<use>Always</use>
 		</parameter>
 		<parameter>
@@ -322,7 +307,6 @@
 			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 			<useRestriction>true</useRestriction>
 			<expression>&amp;Период.ДатаНачала</expression>
-			<inputParameters/>
 			<use>Always</use>
 		</parameter>
 		<parameter>
@@ -342,7 +326,6 @@
 			<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
 			<useRestriction>true</useRestriction>
 			<expression>&amp;Период.ДатаОкончания</expression>
-			<inputParameters/>
 			<use>Always</use>
 		</parameter>
 		<settingsVariant>
