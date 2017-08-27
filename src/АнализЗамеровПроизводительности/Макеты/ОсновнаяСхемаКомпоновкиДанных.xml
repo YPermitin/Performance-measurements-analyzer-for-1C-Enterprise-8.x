@@ -8,101 +8,11 @@
 		<dataSet xsi:type="DataSetQuery">
 			<name>ЗамерыПроизводительности</name>
 			<field xsi:type="DataSetFieldField">
-				<dataPath>КоличествоОперацийХорошо</dataPath>
-				<field>КоличествоОперацийХорошо</field>
-				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
-					<d5p1:item>
-						<d5p1:lang>ru</d5p1:lang>
-						<d5p1:content>Количество операций хорошо</d5p1:content>
-					</d5p1:item>
-				</title>
-				<useRestriction>
-					<field>true</field>
-					<condition>true</condition>
-					<group>true</group>
-					<order>true</order>
-				</useRestriction>
-				<appearance/>
-				<inputParameters/>
-			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>ДатаЗаписи</dataPath>
-				<field>ДатаЗаписи</field>
-				<appearance/>
-				<inputParameters/>
-			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>ВремяВыполнения</dataPath>
-				<field>ВремяВыполнения</field>
-				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
-					<d5p1:item>
-						<d5p1:lang>ru</d5p1:lang>
-						<d5p1:content>Время выполнения (сек.)</d5p1:content>
-					</d5p1:item>
-				</title>
-				<appearance/>
-				<inputParameters/>
-			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>ЦелевоеВремя</dataPath>
-				<field>ЦелевоеВремя</field>
-				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
-					<d5p1:item>
-						<d5p1:lang>ru</d5p1:lang>
-						<d5p1:content>Целевое время</d5p1:content>
-					</d5p1:item>
-				</title>
-				<appearance/>
-				<inputParameters/>
-			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>Приоритет</dataPath>
-				<field>Приоритет</field>
-				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
-					<d5p1:item>
-						<d5p1:lang>ru</d5p1:lang>
-						<d5p1:content>Приоритет</d5p1:content>
-					</d5p1:item>
-				</title>
-				<appearance/>
-				<inputParameters/>
-			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>КоличествоОперацийОтлично</dataPath>
-				<field>КоличествоОперацийОтлично</field>
-				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
-					<d5p1:item>
-						<d5p1:lang>ru</d5p1:lang>
-						<d5p1:content>Количество операций отлично</d5p1:content>
-					</d5p1:item>
-				</title>
-				<useRestriction>
-					<field>true</field>
-					<condition>true</condition>
-					<group>true</group>
-					<order>true</order>
-				</useRestriction>
-				<appearance/>
-				<inputParameters/>
-			</field>
-			<field xsi:type="DataSetFieldField">
 				<dataPath>КлючеваяОперация</dataPath>
 				<field>КлючеваяОперация</field>
 				<role>
 					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
 				</role>
-				<appearance/>
-				<inputParameters/>
-			</field>
-			<field xsi:type="DataSetFieldField">
-				<dataPath>APDEX</dataPath>
-				<field>APDEX</field>
-				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
-					<d5p1:item>
-						<d5p1:lang>ru</d5p1:lang>
-						<d5p1:content>APDEX</d5p1:content>
-					</d5p1:item>
-				</title>
 				<appearance/>
 				<inputParameters/>
 			</field>
@@ -125,9 +35,64 @@
 				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
+				<dataPath>ВремяВыполнения</dataPath>
+				<field>ВремяВыполнения</field>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>APDEX</dataPath>
+				<field>APDEX</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>APDEX</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
 				<dataPath>Комментарий</dataPath>
 				<field>Комментарий</field>
 				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоОперацийОтлично</dataPath>
+				<field>КоличествоОперацийОтлично</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Количество операций отлично</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>Приоритет</dataPath>
+				<field>Приоритет</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Приоритет</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ДатаЗаписи</dataPath>
+				<field>ДатаЗаписи</field>
+				<appearance/>
+				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>НомерСеанса</dataPath>
@@ -136,11 +101,79 @@
 					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
 				</role>
 				<appearance/>
+				<inputParameters/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>Пользователь</dataPath>
 				<field>Пользователь</field>
 				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>КоличествоОперацийХорошо</dataPath>
+				<field>КоличествоОперацийХорошо</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Количество операций хорошо</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>ЦелевоеВремя</dataPath>
+				<field>ЦелевоеВремя</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Целевое время</d5p1:content>
+					</d5p1:item>
+				</title>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МаксимальноеКоличествоОпераций</dataPath>
+				<field>МаксимальноеКоличествоОпераций</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Максимальное количество операций</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<appearance/>
+				<inputParameters/>
+			</field>
+			<field xsi:type="DataSetFieldField">
+				<dataPath>МинимальныйПриоритет</dataPath>
+				<field>МинимальныйПриоритет</field>
+				<title xmlns:d5p1="http://v8.1c.ru/8.1/data/core" xsi:type="d5p1:LocalStringType">
+					<d5p1:item>
+						<d5p1:lang>ru</d5p1:lang>
+						<d5p1:content>Минимальный приоритет</d5p1:content>
+					</d5p1:item>
+				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
+				<appearance/>
+				<inputParameters/>
 			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ
@@ -160,31 +193,77 @@
 			ТОГДА 1
 		ИНАЧЕ 0
 	КОНЕЦ КАК КоличествоОперацийХорошо,
-	ВЫБОР
-		КОГДА ЗамерыВремени.ВремяВыполнения &lt;= ЗамерыВремени.КлючеваяОперация.ЦелевоеВремя
-			ТОГДА 1
-		ИНАЧЕ 0
-	КОНЕЦ + ВЫБОР
-		КОГДА ЗамерыВремени.ВремяВыполнения &gt; ЗамерыВремени.КлючеваяОперация.ЦелевоеВремя
-				И ЗамерыВремени.ВремяВыполнения &lt;= ЗамерыВремени.КлючеваяОперация.ЦелевоеВремя * 4
-			ТОГДА 1
-		ИНАЧЕ 0
-	КОНЕЦ / 2 / 1 КАК APDEX,
+	NULL КАК APDEX,
 	1 КАК КоличествоОпераций,
 	ЗамерыВремени.Пользователь КАК Пользователь,
 	ЗамерыВремени.НомерСеанса КАК НомерСеанса,
 	ЗамерыВремени.Комментарий КАК Комментарий
+ПОМЕСТИТЬ ИсходныеДанные
 ИЗ
 	РегистрСведений.ЗамерыВремени КАК ЗамерыВремени
 ГДЕ
 	ЗамерыВремени.ДатаЗаписи МЕЖДУ &amp;НачалоПериода И &amp;КонецПериода
+;
 
-УПОРЯДОЧИТЬ ПО
-	ДатаЗаписи</query>
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	МАКСИМУМ(ДанныеКлючевыхОпераций.КоличествоОпераций) КАК МаксимальноеКоличествоОперацийЗаПериод,
+	МИНИМУМ(ДанныеКлючевыхОпераций.Приоритет) КАК МинимальныйПриоритет
+ПОМЕСТИТЬ СлужебныеДанные
+ИЗ
+	(ВЫБРАТЬ
+		ИсходныеДанные.КлючеваяОперация КАК КлючеваяОперация,
+		СУММА(ИсходныеДанные.КоличествоОпераций) КАК КоличествоОпераций,
+		МИНИМУМ(ИсходныеДанные.Приоритет) КАК Приоритет
+	ИЗ
+		ИсходныеДанные КАК ИсходныеДанные
+	
+	СГРУППИРОВАТЬ ПО
+		ИсходныеДанные.КлючеваяОперация) КАК ДанныеКлючевыхОпераций
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ИсходныеДанные.КлючеваяОперация КАК КлючеваяОперация,
+	ИсходныеДанные.ЦелевоеВремя КАК ЦелевоеВремя,
+	ИсходныеДанные.Приоритет КАК Приоритет,
+	ИсходныеДанные.ДатаЗаписи КАК ДатаЗаписи,
+	ИсходныеДанные.ВремяВыполнения КАК ВремяВыполнения,
+	ИсходныеДанные.КоличествоОперацийОтлично КАК КоличествоОперацийОтлично,
+	ИсходныеДанные.КоличествоОперацийХорошо КАК КоличествоОперацийХорошо,
+	ИсходныеДанные.APDEX КАК APDEX,
+	ИсходныеДанные.КоличествоОпераций КАК КоличествоОпераций,
+	ИсходныеДанные.Пользователь КАК Пользователь,
+	ИсходныеДанные.НомерСеанса КАК НомерСеанса,
+	ИсходныеДанные.Комментарий КАК Комментарий,
+	ЕСТЬNULL(СлужебныеДанные.МаксимальноеКоличествоОперацийЗаПериод, 0) КАК МаксимальноеКоличествоОпераций,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(СлужебныеДанные.МинимальныйПриоритет, 0) = 0
+			ТОГДА 1
+		ИНАЧЕ ЕСТЬNULL(СлужебныеДанные.МинимальныйПриоритет, 0)
+	КОНЕЦ КАК МинимальныйПриоритет
+ИЗ
+	ИсходныеДанные КАК ИсходныеДанные
+		ЛЕВОЕ СОЕДИНЕНИЕ СлужебныеДанные КАК СлужебныеДанные
+		ПО (ИСТИНА)</query>
 		</dataSet>
 		<totalField>
 			<dataPath>APDEX</dataPath>
-			<expression>(СУММА(КоличествоОперацийОтлично) + (СУММА(КоличествоОперацийХорошо) / 2)) / СУММА(КоличествоОпераций)</expression>
+			<expression>Выбор 
+    Когда НЕ ЗначениеЗаполнено(СУММА(КоличествоОпераций)) 
+    Тогда 0 
+    Иначе (
+        (СУММА(КоличествоОперацийОтлично) * 
+            (МАКСИМУМ(МаксимальноеКоличествоОпераций) / СУММА(КоличествоОпераций) * (1 - (МАКСИМУМ(Приоритет) - 1) / МИНИМУМ(МинимальныйПриоритет)))
+        )
+        + 
+        (СУММА(КоличествоОперацийХорошо) *
+            (МАКСИМУМ(МаксимальноеКоличествоОпераций) / СУММА(КоличествоОпераций) * (1 - (МАКСИМУМ(Приоритет) - 1) / МИНИМУМ(МинимальныйПриоритет)))
+        ) / 2) / 
+        (СУММА(КоличествоОпераций) * 
+            (МАКСИМУМ(МаксимальноеКоличествоОпераций) / СУММА(КоличествоОпераций) * (1 - (МАКСИМУМ(Приоритет) - 1) / МИНИМУМ(МинимальныйПриоритет)))
+        )+ 0.001 
+Конец</expression>
 		</totalField>
 		<parameter>
 			<name>Период</name>
@@ -263,6 +342,12 @@
 			<field>КлючеваяОперация</field>
 		</item>
 		<item xsi:type="SelectedItemField">
+			<field>Приоритет</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ЦелевоеВремя</field>
+		</item>
+		<item xsi:type="SelectedItemField">
 			<field>Пользователь</field>
 		</item>
 		<item xsi:type="SelectedItemField">
@@ -275,19 +360,11 @@
 			<field>ВремяВыполнения</field>
 		</item>
 		<item xsi:type="SelectedItemField">
-			<use>false</use>
-			<field>Комментарий</field>
-		</item>
-		<item xsi:type="SelectedItemField">
 			<field>APDEX</field>
 		</item>
 		<item xsi:type="SelectedItemField">
 			<use>false</use>
-			<field>Приоритет</field>
-		</item>
-		<item xsi:type="SelectedItemField">
-			<use>false</use>
-			<field>ЦелевоеВремя</field>
+			<field>Комментарий</field>
 		</item>
 	</selection>
 	<filter>
@@ -295,7 +372,6 @@
 			<use>false</use>
 			<left xsi:type="dcscor:Field">КлючеваяОперация</left>
 			<comparisonType>Equal</comparisonType>
-			<right xsi:type="dcscor:DesignTimeValue"/>
 			<userSettingID>d8973cff-d24b-4651-8e2c-de74db607a82</userSettingID>
 		</item>
 	</filter>
@@ -372,6 +448,20 @@
 		<groupItems>
 			<item xsi:type="GroupItemField">
 				<field>КлючеваяОперация</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type="GroupItemField">
+				<field>Приоритет</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+			<item xsi:type="GroupItemField">
+				<field>ЦелевоеВремя</field>
 				<groupType>Items</groupType>
 				<periodAdditionType>None</periodAdditionType>
 				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
