@@ -13,7 +13,6 @@
 				<role>
 					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
 				</role>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>КоличествоОпераций</dataPath>
@@ -30,12 +29,10 @@
 					<group>true</group>
 					<order>true</order>
 				</useRestriction>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ВремяВыполнения</dataPath>
 				<field>ВремяВыполнения</field>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>APDEX</dataPath>
@@ -46,12 +43,10 @@
 						<d5p1:content>APDEX</d5p1:content>
 					</d5p1:item>
 				</title>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>Комментарий</dataPath>
 				<field>Комментарий</field>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>КоличествоОперацийОтлично</dataPath>
@@ -68,7 +63,6 @@
 					<group>true</group>
 					<order>true</order>
 				</useRestriction>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>Приоритет</dataPath>
@@ -79,12 +73,10 @@
 						<d5p1:content>Приоритет</d5p1:content>
 					</d5p1:item>
 				</title>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ДатаЗаписи</dataPath>
 				<field>ДатаЗаписи</field>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>НомерСеанса</dataPath>
@@ -92,12 +84,10 @@
 				<role>
 					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
 				</role>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>Пользователь</dataPath>
 				<field>Пользователь</field>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>КоличествоОперацийХорошо</dataPath>
@@ -114,7 +104,6 @@
 					<group>true</group>
 					<order>true</order>
 				</useRestriction>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ЦелевоеВремя</dataPath>
@@ -125,7 +114,6 @@
 						<d5p1:content>Целевое время</d5p1:content>
 					</d5p1:item>
 				</title>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>МаксимальноеКоличествоОпераций</dataPath>
@@ -142,7 +130,6 @@
 					<group>true</group>
 					<order>true</order>
 				</useRestriction>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>МинимальныйПриоритет</dataPath>
@@ -159,7 +146,6 @@
 					<group>true</group>
 					<order>true</order>
 				</useRestriction>
-				<appearance/>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ДатаЗаписиЧас</dataPath>
@@ -173,7 +159,6 @@
 				<role>
 					<dimension xmlns="http://v8.1c.ru/8.1/data-composition-system/common">true</dimension>
 				</role>
-				<appearance/>
 			</field>
 			<dataSource>ИсточникДанных1</dataSource>
 			<query>ВЫБРАТЬ
@@ -198,7 +183,7 @@
 	ЗамерыВремени.Пользователь КАК Пользователь,
 	ЗамерыВремени.НомерСеанса КАК НомерСеанса,
 	ЗамерыВремени.Комментарий КАК Комментарий,
-	ЗамерыВремени.ДатаЗаписиНачалоЧаса КАК ДатаЗаписиЧас
+	НАЧАЛОПЕРИОДА(ЗамерыВремени.ДатаЗаписи, ЧАС) КАК ДатаЗаписиЧас
 ПОМЕСТИТЬ ИсходныеДанные
 ИЗ
 	РегистрСведений.ЗамерыВремени КАК ЗамерыВремени
@@ -464,7 +449,6 @@
 			</appearance>
 		</item>
 	</conditionalAppearance>
-	<outputParameters/>
 	<item xsi:type="StructureItemGroup">
 		<groupItems>
 			<item xsi:type="GroupItemField">
@@ -495,7 +479,6 @@
 		<selection>
 			<item xsi:type="SelectedItemAuto"/>
 		</selection>
-		<outputParameters/>
 		<item xsi:type="StructureItemGroup">
 			<groupItems>
 				<item xsi:type="GroupItemField">
@@ -512,7 +495,6 @@
 			<selection>
 				<item xsi:type="SelectedItemAuto"/>
 			</selection>
-			<outputParameters/>
 			<item xsi:type="StructureItemGroup">
 				<groupItems>
 					<item xsi:type="GroupItemField">
@@ -529,7 +511,6 @@
 				<selection>
 					<item xsi:type="SelectedItemAuto"/>
 				</selection>
-				<outputParameters/>
 				<item xsi:type="StructureItemGroup">
 					<order>
 						<item xsi:type="OrderItemAuto"/>
@@ -537,7 +518,6 @@
 					<selection>
 						<item xsi:type="SelectedItemAuto"/>
 					</selection>
-					<outputParameters/>
 				</item>
 			</item>
 		</item>
@@ -601,7 +581,6 @@
 			<selection>
 				<item xsi:type="SelectedItemAuto"/>
 			</selection>
-			<outputParameters/>
 		</point>
 		<series>
 			<groupItems>
@@ -619,12 +598,10 @@
 			<selection>
 				<item xsi:type="SelectedItemAuto"/>
 			</selection>
-			<outputParameters/>
 		</series>
 		<selection>
 			<item xsi:type="SelectedItemAuto"/>
 		</selection>
-		<outputParameters/>
 	</item>
 </Settings>﻿<?xml version="1.0" encoding="UTF-8"?>
 <SchemaFile xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
