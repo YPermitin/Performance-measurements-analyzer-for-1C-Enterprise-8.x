@@ -216,7 +216,7 @@
 			ТОГДА 1
 		ИНАЧЕ 0
 	КОНЕЦ КАК КоличествоОперацийХорошо,
-	NULL КАК APDEX,
+	0 КАК APDEX,
 	1 КАК КоличествоОпераций,
 	ЗамерыВремени.Пользователь КАК Пользователь,
 	ЗамерыВремени.НомерСеанса КАК НомерСеанса,
@@ -531,6 +531,161 @@
 					<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
 				</dcscor:item>
 			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>APDEX</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">APDEX</left>
+					<comparisonType>GreaterOrEqual</comparisonType>
+					<right xsi:type="xs:decimal">0.001</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">APDEX</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">0.5</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">#BBBBBB</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Неприемлимо (APDEX)</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>APDEX</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">APDEX</left>
+					<comparisonType>GreaterOrEqual</comparisonType>
+					<right xsi:type="xs:decimal">0.5</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">APDEX</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">0.7</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">#FFD4AB</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Плохо (APDEX)</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>APDEX</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">APDEX</left>
+					<comparisonType>GreaterOrEqual</comparisonType>
+					<right xsi:type="xs:decimal">0.7</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">APDEX</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">0.85</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">#FFFF99</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удовлетворительно (APDEX)</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>APDEX</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">APDEX</left>
+					<comparisonType>GreaterOrEqual</comparisonType>
+					<right xsi:type="xs:decimal">0.85</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">APDEX</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">0.94</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">#CCFF68</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Хорошо (APDEX)</v8:content>
+				</v8:item>
+			</presentation>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>APDEX</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">APDEX</left>
+					<comparisonType>GreaterOrEqual</comparisonType>
+					<right xsi:type="xs:decimal">0.94</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">APDEX</left>
+					<comparisonType>Less</comparisonType>
+					<right xsi:type="xs:decimal">1.002</right>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>ЦветФона</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:Color">#CCFFFF</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<presentation xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отлично (APDEX)</v8:content>
+				</v8:item>
+			</presentation>
 		</item>
 	</conditionalAppearance>
 	<item xsi:type="StructureItemGroup">
