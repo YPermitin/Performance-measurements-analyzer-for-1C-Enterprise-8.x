@@ -642,6 +642,30 @@
 			<orderType>Desc</orderType>
 		</item>
 	</order>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>APDEX</field>
+				</item>
+				<item>
+					<field>ВремяВыполнения</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧН=0.00</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+	</conditionalAppearance>
 	<outputParameters>
 		<dcscor:item xsi:type="SettingsParameterValue">
 			<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
@@ -723,6 +747,30 @@
 			<orderType>Desc</orderType>
 		</item>
 	</order>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>APDEX</field>
+				</item>
+				<item>
+					<field>ВремяВыполнения</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧН=0.00</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+	</conditionalAppearance>
 	<outputParameters>
 		<dcscor:item xsi:type="SettingsParameterValue">
 			<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
@@ -788,6 +836,13 @@
 			<comparisonType>Equal</comparisonType>
 			<userSettingID>64d1e33a-6dd0-4935-b6cb-749773afc8a1</userSettingID>
 		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">Пользователь</left>
+			<comparisonType>Contains</comparisonType>
+			<right xsi:type="xs:string"/>
+			<userSettingID>0ff5854f-b55c-4387-b85e-847cc4fd42d8</userSettingID>
+		</item>
 	</filter>
 	<dataParameters>
 		<dcscor:item xsi:type="SettingsParameterValue">
@@ -804,6 +859,30 @@
 			<orderType>Desc</orderType>
 		</item>
 	</order>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>APDEX</field>
+				</item>
+				<item>
+					<field>ВремяВыполнения</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧДЦ=2; ЧН=0.00</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+	</conditionalAppearance>
 	<outputParameters>
 		<dcscor:item xsi:type="SettingsParameterValue">
 			<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
