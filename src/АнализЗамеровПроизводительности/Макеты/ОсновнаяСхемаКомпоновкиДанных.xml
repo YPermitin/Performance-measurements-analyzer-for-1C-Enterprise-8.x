@@ -51,6 +51,12 @@
 						<d5p1:content>Количество операций отлично</d5p1:content>
 					</d5p1:item>
 				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>Приоритет</dataPath>
@@ -86,6 +92,12 @@
 						<d5p1:content>Количество операций хорошо</d5p1:content>
 					</d5p1:item>
 				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ЦелевоеВремя</dataPath>
@@ -106,6 +118,12 @@
 						<d5p1:content>Максимальное количество операций</d5p1:content>
 					</d5p1:item>
 				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>МинимальныйПриоритет</dataPath>
@@ -116,6 +134,12 @@
 						<d5p1:content>Минимальный приоритет</d5p1:content>
 					</d5p1:item>
 				</title>
+				<useRestriction>
+					<field>true</field>
+					<condition>true</condition>
+					<group>true</group>
+					<order>true</order>
+				</useRestriction>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ДатаЗаписиЧас</dataPath>
@@ -329,6 +353,10 @@
 			<dataPath>ВремяВыполнения</dataPath>
 			<expression>Среднее(ВремяВыполнения)</expression>
 		</totalField>
+		<totalField>
+			<dataPath>КоличествоОпераций</dataPath>
+			<expression>Сумма(КоличествоОпераций)</expression>
+		</totalField>
 		<parameter>
 			<name>Период</name>
 			<title xmlns:d4p1="http://v8.1c.ru/8.1/data/core" xsi:type="d4p1:LocalStringType">
@@ -462,21 +490,6 @@
 		<item xsi:type="SelectedItemField">
 			<use>false</use>
 			<field>Комментарий</field>
-		</item>
-		<item xsi:type="SelectedItemField">
-			<field>КоличествоОперацийХорошо</field>
-		</item>
-		<item xsi:type="SelectedItemField">
-			<field>МаксимальноеКоличествоОпераций</field>
-		</item>
-		<item xsi:type="SelectedItemField">
-			<field>МинимальныйПриоритет</field>
-		</item>
-		<item xsi:type="SelectedItemField">
-			<field>КоличествоОперацийОтлично</field>
-		</item>
-		<item xsi:type="SelectedItemField">
-			<field>КоличествоОпераций</field>
 		</item>
 	</selection>
 	<filter>
