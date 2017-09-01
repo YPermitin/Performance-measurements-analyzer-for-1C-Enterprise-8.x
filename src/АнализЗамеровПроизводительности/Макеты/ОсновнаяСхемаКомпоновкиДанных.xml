@@ -23,12 +23,6 @@
 						<d5p1:content>Количество операций</d5p1:content>
 					</d5p1:item>
 				</title>
-				<useRestriction>
-					<field>true</field>
-					<condition>true</condition>
-					<group>true</group>
-					<order>true</order>
-				</useRestriction>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ВремяВыполнения</dataPath>
@@ -57,12 +51,6 @@
 						<d5p1:content>Количество операций отлично</d5p1:content>
 					</d5p1:item>
 				</title>
-				<useRestriction>
-					<field>true</field>
-					<condition>true</condition>
-					<group>true</group>
-					<order>true</order>
-				</useRestriction>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>Приоритет</dataPath>
@@ -98,12 +86,6 @@
 						<d5p1:content>Количество операций хорошо</d5p1:content>
 					</d5p1:item>
 				</title>
-				<useRestriction>
-					<field>true</field>
-					<condition>true</condition>
-					<group>true</group>
-					<order>true</order>
-				</useRestriction>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ЦелевоеВремя</dataPath>
@@ -124,12 +106,6 @@
 						<d5p1:content>Максимальное количество операций</d5p1:content>
 					</d5p1:item>
 				</title>
-				<useRestriction>
-					<field>true</field>
-					<condition>true</condition>
-					<group>true</group>
-					<order>true</order>
-				</useRestriction>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>МинимальныйПриоритет</dataPath>
@@ -140,12 +116,6 @@
 						<d5p1:content>Минимальный приоритет</d5p1:content>
 					</d5p1:item>
 				</title>
-				<useRestriction>
-					<field>true</field>
-					<condition>true</condition>
-					<group>true</group>
-					<order>true</order>
-				</useRestriction>
 			</field>
 			<field xsi:type="DataSetFieldField">
 				<dataPath>ДатаЗаписиЧас</dataPath>
@@ -324,7 +294,7 @@
 	ИсходныеДанные КАК ИсходныеДанные
 		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
 			МАКСИМУМ(ДанныеКлючевыхОперацийДляГруппировки.КоличествоОпераций) КАК МаксимальноеКоличествоОперацийЗаПериод,
-			МИНИМУМ(ДанныеКлючевыхОперацийДляГруппировки.Приоритет) КАК МинимальныйПриоритет
+			МАКСИМУМ(ДанныеКлючевыхОперацийДляГруппировки.Приоритет) КАК МинимальныйПриоритет
 		ИЗ
 			(ВЫБРАТЬ
 				ИсходныеДанные.КлючеваяОперация КАК КлючеваяОперация,
@@ -492,6 +462,21 @@
 		<item xsi:type="SelectedItemField">
 			<use>false</use>
 			<field>Комментарий</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>КоличествоОперацийХорошо</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>МаксимальноеКоличествоОпераций</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>МинимальныйПриоритет</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>КоличествоОперацийОтлично</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>КоличествоОпераций</field>
 		</item>
 	</selection>
 	<filter>
