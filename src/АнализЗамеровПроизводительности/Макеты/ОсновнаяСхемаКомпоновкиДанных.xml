@@ -463,6 +463,12 @@
 			<userSettingID>fbf85102-ea0d-4027-8a1a-e549e5c757b7</userSettingID>
 		</dcscor:item>
 	</dataParameters>
+	<order>
+		<item xsi:type="OrderItemField">
+			<field>ДатаЗаписи</field>
+			<orderType>Asc</orderType>
+		</item>
+	</order>
 	<conditionalAppearance>
 		<item>
 			<selection>
@@ -792,8 +798,8 @@
 	</dataParameters>
 	<order>
 		<item xsi:type="OrderItemField">
-			<field>ВремяВыполнения</field>
-			<orderType>Desc</orderType>
+			<field>ДатаЗаписи</field>
+			<orderType>Asc</orderType>
 		</item>
 	</order>
 	<conditionalAppearance>
@@ -897,8 +903,8 @@
 	</dataParameters>
 	<order>
 		<item xsi:type="OrderItemField">
-			<field>ВремяВыполнения</field>
-			<orderType>Desc</orderType>
+			<field>ДатаЗаписи</field>
+			<orderType>Asc</orderType>
 		</item>
 	</order>
 	<conditionalAppearance>
@@ -1009,8 +1015,8 @@
 	</dataParameters>
 	<order>
 		<item xsi:type="OrderItemField">
-			<field>ВремяВыполнения</field>
-			<orderType>Desc</orderType>
+			<field>ДатаЗаписи</field>
+			<orderType>Asc</orderType>
 		</item>
 	</order>
 	<conditionalAppearance>
