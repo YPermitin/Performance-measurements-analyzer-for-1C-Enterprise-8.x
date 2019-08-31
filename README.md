@@ -6,7 +6,7 @@
 
 ![Пример сформированного отчета](https://github.com/YPermitin/PerformanceMeasurementsAnalyzer-for-1C-Enterprise-8.x/blob/master/media/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D1%81%D1%84%D0%BE%D1%80%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BE%D1%82%D1%87%D0%B5%D1%82%D0%B0.PNG)
 
-Также имеются другие варианты отчета в виде диаграм.
+Также имеются другие варианты отчета в виде диаграмм.
 
 # Другие ссылки
 
