@@ -18,7 +18,7 @@
 
 ![Пример формирования отчета](https://github.com/YPermitin/PerformanceMeasurementsAnalyzer-for-1C-Enterprise-8.x/blob/master/media/Пример%20формирования%20отчета.gif)
 
-Всем просто как никогда!
+Все просто как никогда!
 
 # Требования
 
